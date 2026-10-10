@@ -59,3 +59,5 @@ def sjf_preemptive(at, bt, n):
 
     print("Average Waiting Time:", sum(wt) / n)
     print("Average Turnaround Time:", sum(tat) / n)
+    timeline = [("P" + str(p + 1), s, e) for p, s, e in order]
+    return timeline, sum(wt) / n, sum(tat) / n
